@@ -1,0 +1,242 @@
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.c-section{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-item-div{
+    width: 800px;
+    padding: 20px;
+    background-color: rgb(241, 153, 126);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 10px solid rgb(200,200,200);
+    margin: 20px;
+}
+
+.c-props-div{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-item-img{
+    height: 200px;
+    width: 200px;
+}
+
+.c-item-p{
+    font-size: 18px;
+    margin: 10px;
+}
+
+.c-buttons-div{
+    display: flex;
+    height: 40px;
+}
+
+.c-button-add{
+    background-color: rgb(200,200,200);
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.c-button{
+    font-size: 29px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-left: 30px;
+}
+
+.c-msg-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: rgb(172, 92, 68);
+    margin-top: 100px;
+    padding: 100px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border: 5px solid black;
+}
+
+.c-msg{
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+
+}
+
+.c-msg-button{
+    font-size: 30px;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(173, 173, 173);
+    margin-top: 50px;
+}
+
+.c-precio-total-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 800px;
+}
+
+.c-precio-total{
+    padding: 20px;
+    font-size: 27px;
+    color: rgb(200,200,200);
+}
+
+.c-form{
+    margin-top: 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(107, 107, 107);
+    margin-bottom: 180px;
+}
+
+.c-input{
+    outline: none;
+    border: none;
+    border-bottom: 3px solid rgb(241, 153, 126);
+    margin: 5px;
+    font-size: 20px;
+    width: 500px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(107, 107, 107);
+    color: white;
+}
+
+.c-input::placeholder{
+    color: rgb(192, 192, 192);
+}
+
+.c-button-form{
+    margin-top: 20px;
+    background-color: rgb(241, 153, 126);
+    border: none;
+    border-bottom: 2px solid rgb(160, 103, 86);
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    width: 200px;
+}
+
+.swal2-icon{
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1150px) {
+    .c-item-div{
+        width: 600px;
+    }
+    .c-props-div{
+        width: 175px;
+    }
+    .c-item-p{
+        font-size: 14px;
+    }
+    .c-precio-total-div{
+        margin-left: 500px;
+    }
+    .c-item-img{
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .c-item-div{
+        width: 400px;
+    }
+    .c-props-div{
+        width: 150px;
+    }
+    .c-item-p{
+        margin: 5px;
+        font-size: 12px;
+    }
+    .c-precio-total-div{
+        margin-left: 300px;
+    }
+    .c-precio-total{
+        font-size: 20px;
+    }
+    .c-item-img{
+        width: 150px;
+        height: 150px;
+    }
+    .c-input{
+        width: 250px;
+    }
+    .c-button-form{
+        width: 150px;
+    }
+    .c-buttons-div{
+        padding-top: 20px;
+    }
+    .c-button{
+        font-size: 20px;
+    }
+    .c-button-add{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .c-item-div{
+        width: 300px;
+        height: 150px;
+    }
+    .c-props-div{
+        width: 125px;
+    }
+    .c-item-p{
+        font-size: 10px;
+        margin: 2px;
+    }
+    .c-precio-total-div{
+        margin-left: 200px;
+    }
+    .c-precio-total{
+        font-size: 20px;
+    }
+    .c-item-img{
+        width: 100px;
+        height: 100px;
+    }
+    .c-input{
+        width: 175px;
+        font-size: 15px;
+    }
+    .c-button-form{
+        width: 90px;
+        font-size: 15px;
+    }
+}
